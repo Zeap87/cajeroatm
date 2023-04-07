@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TuCuenta</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Andrés, Bienvenido a tu cuenta</h1>
+    <form action="" id="consulta2">
+    <input type="button" value="Consulta de Saldo" id="Consulta" onclick="consulta(); this.disabled=true;">
+    <input type="button" value="Ocultar Saldo" id="Ocultar" style="display: none;" onclick="ocultarSaldo();">
+    <br><br>
+    
+    <input style="display: none;" type="text" name="saldo" id="saldot" value="750" readonly="readonly"></form>
+    
+    <form action="" onsubmit="">
+     <h2>Transferencias</h2>
+     $ <input type="text" name="" id="montot" placeholder="Cantidad">
+     <br><br>
+     <input type="button" value="Depósito" id="depo" onclick="deposito()">
+     <input type="button" value="Retiro" id="reti" onclick="retiro()">
+     <br><br>
+     <button><a href="index.html">Salir de mi cuenta</a></button>
+    </form> 
+
+    <script src="script.js"></script>
+
+</body>
+</html>

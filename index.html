@@ -5,29 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cajero Automático</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body> 
     <form action="">
-        <h1>Acceso</h1>
+        <h1>¡Bienvenido a DevfBank!</h1>
+        <h2>Accede a tu Cuenta</h2>
         <label for="">Usuario</label>
-        <input type="text" name="user"  id="">
+        <select name= "user">
+            <option value= "blank"></option>
+            <option value= "Athziry">Athziry</option>
+            <option value= "Andres">Andrés</option>
+            <option value= "Paco">Paco</option>
+        </select>
+        <br><br>
         <label for="">Password</label>
         <input type="password" name="contra" id="">
-        <input type="button" value="Ingresar" onclick="acceso(this.form)">
+        <input type="button" value="Ingresar" onclick="ingresar(this.form)">
+        <br><br>
+        <input type="button" value="¿Olvidaste tu Contraseña?" onclick="togglePistas()">
+        <br><br>
+        <div id="pistas-box" style="display: none;">
+            <span id="close-btn" onclick="togglePistas()"></span>
+            <p>Pistas: Athziry - 123 / Andrés - 456 / Paco - 789</p>
+          </div>
     </form>
-    <script>
-        function acceso(form){
-            if (form.user.value=="Athziry") { if (form.contra.value=="123"){
-                  location="principal.html";  
-                } else {
-                alert("error de contraseña");
-            }
-        } else {
-            alert("error de datos de usuario");
-        } 
-    }
-    </script>
-    
+    <script src="script.js"></script>
 </body>
 </html>
